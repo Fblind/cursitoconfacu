@@ -1,0 +1,30 @@
+/* Esto es un grupo de declaraciones css o regla */
+/* cada regla empieza con un selector que en este caso es el nombre de un elemento html y decimos entonces que es un selector de elemento */
+body {
+  /* Cada declaración tiene una propiedad y un valor */
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+
+/* Cascada => hereda los estilos de los padres */
+
+/* Podemos poner reglas para elementos que no existan en el documento html y no nos tira ningun error */
+h1 {
+  color: purple;
+}
+
+/* Cascada => agarrar el estilo con mayor especificación */
+h2 {
+  color: purple;
+  /* Cascada => toma la declaracion de estilos que esta más abajo cuando las dos podrian aplicar al mismo elemento */
+  color: green;
+}
+
+/* Te cambia todos los colores de todos los h3 */
+h3 {
+  color: red;
+}
+
+h3 {
+  color: black;
+}

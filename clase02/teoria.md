@@ -13,6 +13,9 @@
 
 <img src="camino/a/la/ruta.jpg" alt="Esto es una foto!" title="Esto es una foto!" />
 
+* imagenes de gatitos https://placekitten.com/
+* imagenes de perritos https://placedog.net/
+
 ## Elementos HTML
 * blockquote
 * strong
