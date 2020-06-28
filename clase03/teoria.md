@@ -9,7 +9,7 @@
 ## Árbol de HTML
 El documento HTML hay que verlo en como si fuera un arbol, tiene niveles de jerarquía donde todas parten de un elemento, nuestro elemento **raíz** (o root). La raíz es nuestro elemento `html`. Dentro de éste creamos todos nuestros elementos y contenido, donde a elemento de cada nivel (o cada elemento dentro de un elemento) se lo llama **hijo (o children)**, al elemento que lo contiene se lo llama **padre (o parent)** y si tenemos varios elementos que estan dentro de un elemento padre a éstos se llaman **hermanos (o siblings)** entre sí.
 
-![arbol de documento html](/home/fack/Documentos/cursitoconfacu/clase03/dom_tree.gif)
+![arbol de documento html](https://github.com/Fblind/cursitoconfacu/blob/master/clase03/dom_tree.gif)
 
 ## Contenido en linea vs contenido en bloque
 En html podemos separar la creación de nuestro contenido en dos categorías de elementos, los que aceptan contenido en linea y los que tienen contenido en bloque (inline o block text content), entonces:
@@ -21,7 +21,7 @@ En html podemos separar la creación de nuestro contenido en dos categorías de 
 ## Layout semántico
 Hay un conjunto completo de elementos diseñados con el único propósito de agregar más significado al diseño general de una página web, y se llaman **elementos de seccionamiento** (sectioning elements), cómo venimos hablando a través del curso debemos usar estos elementos semánticos con el fin de describir mucho mejor nuestra página y hacen que tanto los motores de busqueda y lectores de pantalla (screen readers) que puedan identificar las partes de nuestra web más fácil y mejor.
 
-![layout semántico](/home/fack/Documentos/cursitoconfacu/clase03/semantic-layout.png)
+![layout semántico](https://github.com/Fblind/cursitoconfacu/blob/master/clase03/semantic-layout.png)
 
 ## CSS
 **C**ascade **S**tyle **S**heet significa hoja de estilo en cascada, y nos sirve para agregar reglas que cambian el formato de nuestro html. La parte de cascada significa que va tomando las reglas en orden descendente, si tenes una regla que dice que el color de tu texto tiene que ser rojo y abajo tenes esa misma regla pero dice que tiene que ser negro te va a mostrar el negro.
