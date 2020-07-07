@@ -1,4 +1,4 @@
-# Clase 2
+# Clase 3
 
 * Nuevos elementos HTML (en index.html)
 * Arbol del documento HTML
@@ -38,12 +38,12 @@ Hay un conjunto completo de elementos diseñados con el único propósito de agr
 
 * Inline style en el html. (no recomendado, solo sirve para uno, no es muy extendible)
 ```html
-<body syle="background-color: yellow;"></body>
+<body style="background-color: yellow; color: white;"></body>
 ```
 
 * Archivo css externo. (sirve para multiples archivos)
 
-Primero lo linkeamos en el html
+Primero lo linkeamos en el archivo html adentro del `head`
 ```html
 <link href="path/to/css/style.css" rel="stylesheet" type="text/css" />
 ```

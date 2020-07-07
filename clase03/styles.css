@@ -28,3 +28,18 @@ h3 {
 h3 {
   color: black;
 }
+
+/* fusiona */
+
+h4 {
+  color: green
+}
+
+h4 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h4 {
+  color: green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
