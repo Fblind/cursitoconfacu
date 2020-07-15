@@ -82,7 +82,7 @@ p {
 ``` 
 
 ## Fondo (background)
-Para ponerle un fondo a algún elemento lo hacemos a través de la propiedad `background-*`. Por ejemplo, si queremos que nuestro fondo se verde usamos la propiedad *`background-color`* con el valor green.
+Para ponerle un fondo a algún elemento lo hacemos a través de la propiedad `background-*`. Por ejemplo, si queremos que nuestro fondo sea verde usamos la propiedad *`background-color`* con el valor green.
 
 Vimos tres propiedades, `background-color`, `background-image` y `background-repeat` y a su vez todas se pueden combinar usando un shorthand [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 
