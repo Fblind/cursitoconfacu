@@ -1,0 +1,112 @@
+/* Type selector */
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Agrupo estilos separando los selectores con comas */
+h2, 
+h3,
+h4 {
+  color: green;
+  background-color: black;
+}
+
+/* Class selector - selector de clase */
+/* el orden que importa es en la hoja de estilo no el orden que que pones en el html */
+.planificacion {
+  /* color: red; */
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.color-violeta {
+  color: violet;
+  font-style: normal;
+}
+
+.color-rojo {
+  color: red;
+}
+
+.color-amarillo {
+  color: yellow;
+}
+
+.texto-centrado {
+  text-align: center;
+}
+
+.cursiva-grande-negra {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.bg-rojo {
+  background-color: red;
+}
+
+/* ID Selector - selector por id */
+#madrid {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  display: inline;
+  font-size: 2rem;
+}
+
+#interlaken {
+  color: violet;
+}
+
+/* Combinar selectores */
+#interlaken.color-rojo {
+  color: white;
+}
+
+/* Identificador universal */
+* {
+  color: blue;
+}
+
+a {
+  color: green;
+}
+
+a.primark {
+  color: yellow;
+}
+
+/* Attribute Selector - selector de atributo */
+[href="#viena"] {
+  font-size: 2rem;
+}
+
+aside {
+  background-color: red;
+  font-size: 2rem;
+  font-style: italic;
+
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+
+  border-radius: 3rem;
+  box-shadow: 10px -10px 10px black;
+}
+
+/* Selector descendente o combinador descendente */
+aside p strong {
+  color: white;
+  text-shadow: 5px 8px #558ABB;
+}
+
+.left {
+  float: left;
+  width: 60%;
+}
+
+.clear {
+  clear: both;
+}
