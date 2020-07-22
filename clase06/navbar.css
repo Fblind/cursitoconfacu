@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  background-color: blue;
+  text-align: center;
+}
+
+li {
+  border: 2px solid blue;
+  list-style-type: none;
+  display: inline-block;
+  margin: 0.5rem 0.5rem;
+}
+
+a.link-list {
+  background-color: chocolate;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+a.link-list:hover {
+  background-color: yellow;
+  color: black;
+}

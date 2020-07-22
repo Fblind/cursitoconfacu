@@ -92,7 +92,7 @@ Otras reglas:
 Podemos seleccionar elementos basandonos en otros selectores, a esto llamamos combinación en CSS y como casi todo en CSS tenemos varias formas de hacerlo
 
 ## Combinador descendiente (descendant combinator or descendant selectors)
-Combina dos selectores (class, id, elements, etc) **separados por espacios** donde el último selector tiene que ser descendiente del anterior (puede ser el hijo pero también el nieto)
+Combina *dos* selectores (class, id, elements, etc) **separados por espacios** donde el último selector tiene que ser descendiente del anterior (puede ser el hijo pero también el nieto)
 ```css
 .texto span {
   /* nuestras declaraciones de estilo */
