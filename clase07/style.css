@@ -1,0 +1,106 @@
+/* --- Repaso ---- */
+/* Pseudo classes Link */
+/* LVFHA */
+/* link, visited, focus, hover, active */
+a:link {
+  color: violet;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: red;
+}
+
+/* Existen otras pseudo clases que aplican a otros elementos */
+
+span {
+  color: maroon;
+}
+
+h1 {
+  margin: 0;
+  /* padding: 30px; */
+  border: 1px solid yellow;
+  display: block;
+}
+
+/* box-sizing y tipos de cajas cambian en la forma en que calculan el total del ancho de la caja */
+.box1 {
+  /* content-box => total ocupado = ancho del contenido + ancho del padding + ancho del borde + ancho de margin */
+  box-sizing: content-box;
+  border: 2px solid green;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.box2 {
+  /* border-box => total ocupado = width definido (contenido + padding + border) */
+  box-sizing: border-box;
+  border: 2px solid blue;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+/* ------------------------------------------------------- */
+
+/* ----- width - vw ------- */
+.box-viewport {
+  box-sizing: border-box;
+  border: 2px solid blue;
+  margin-top: 1rem;
+  width: 50vw;
+}
+
+.box-porcentaje {
+  box-sizing: border-box;
+  border: 2px solid blue;
+  margin-top: 1rem;
+  width: 50%;
+  /* display: none; */
+}
+
+.padre {
+  width: 50%;
+}
+
+/* ------------------------------------------- */
+
+/* ---- Float & Clear ----- */
+p, img {
+  border: 2px solid blue;
+  margin: 0;
+}
+
+img {
+  float: left;
+}
+
+p {
+  float: right;
+}
+
+/* p::after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+.left {
+  width: 40%;
+  float: left;
+}
+
+.right {
+  width: 40%;
+  float: right;
+}
+
+.clear-both {
+  display: inline-block;
+  clear: both;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 1 - mostrar el ejemplo con el float sin nada que anda sin reiniciar */
+    /* 2 - Agregar mas contenido y mostrar la importancia del clear SIEMPRE aunque no parezca que se necesita */
+    * {box-sizing: border-box;}
+    *::before, *::after {box-sizing: inherit;}
+    header, main, aside, footer {
+      border: 1px solid blue;
+      text-align: center;
+    }
+    main {
+      width: 80%;
+      float: left;
+    }
+    aside {
+      width: 20%;
+      float: right;
+    }
+    /* footer {
+      clear: both;
+    } */
+  </style>
+</head>
+<body>
+  <header>HEADER</header>
+  <main>MAIN</main>
+  <aside>ASIDE</aside>
+  <!-- <aside>ASIDE Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, non sapiente, ex voluptates aliquid animi rem, illum est recusandae reiciendis quam labore tempora eveniet consequatur eos optio. Exercitationem, totam dignissimos!</aside> -->
+  <footer>FOOTER</footer>
+</body>
+</html>
