@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+  <!-- attr de forms => method (GET, POST), action -->
+  <!-- HTTP Methods! -->
+  <!--
+    -- GET => ?nombre=Facundo&apellido=Soria
+    -- POST => payload { nombre: Facundo, apellido: Soria }
+    -- PUT
+    -- PATCH
+    -- DELETE
+    -- OPTIONS 
+  -->
+  <form action="" method="GET">
+    <!-- Dentro del form van los campos del formulario -->
+    <!--
+      Elementos principales para recopilar entradas de los usuarios
+    <input>
+    <select>
+    <textarea>
+    -->
+    <!-- Sumbit opciones -->
+    <!--
+      <button type="submit">
+      -->
+      <input type="submit" value="Submit!">
+    <!-- Para separar por secciones o decir que estos campos pertenecen a una seccion usamos fieldset -->
+    <fieldset>
+      <!-- Podemos ponerle titulo a la seccion -->
+      <legend>Titulo del fieldset</legend>
+      <!-- aca adentro van a ir todos los campos relacionados entre sí -->
+      <input type="text" />
+    </fieldset>
+    <!-- Para asociar un "titulo" con un campo de entrada, usamos la etiqueta label -->
+    <label for="nombre">nombre</label>
+    <input id="nombre" type="text" />
+
+    <label>apellido <input type="text"/></label>
+  </form>
+
+  <!-- form con GET -->
+  <form action="" method="GET">
+    <!-- el form valida por defecto los tipos y si le pones el attr novalidate no lo valida y deja pasar todo -->
+    <!-- <input type="checkbox" name="" id="">
+    <input type="color" name="" id="">
+    <input type="date" name="" id="">
+    <input type="number" name="" id="">
+    <input type="radio" name="" id="">
+    <input type="tel" name="" id=""> -->
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+    <label for="nombre">nombre</label>
+    <input id="nombre" type="text" name="nombre" />
+
+    <label>apellido <input type="text" name="apellido"/></label>
+    <!-- resultado por get, lo que le agrega a la action url => 
+        ?email=asd%40asd.com&nombre=Facundo&apellido=Soria
+    -->
+    <button type="submit">Guardar GET!!</button>
+  </form>
+
+  <!-- form con POST -->
+  <form action="" method="POST" style="margin-top: 4rem">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+    <label for="nombre">nombre</label>
+    <input id="nombre" type="text" name="nombre" />
+
+    <label>apellido <input type="text" name="apellido"/></label>
+    <!-- resultado por POST, lo manda por el content-type application/x-www-form-urlencoded => 
+        email=asd%40asd.com&nombre=Facundo&apellido=Soria
+    -->
+    <button type="submit">Guardar POST!!</button>
+  </form>
+</body>
+</html>
