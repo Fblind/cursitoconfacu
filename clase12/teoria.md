@@ -52,6 +52,14 @@ Funciona de la misma manera que el `type="radio"` solo que este puede selecciona
   </label>
 ```
 
+### [Submit](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+Este tipo de input se mostrará como un botón y sirve para enviar toda la data asociada de nuestro formulario cuando hacemos click sobre él o cuando apretamos `enter` en nuestro teclado.
+```html
+<input type="submit" value="Enviar!">
+```
+
+> !No necesariamente tenemos que usar un input del tipo submit para enviar nuestro formulario, también podemos usar un button del type submit, ejemplo => `<button type="submit">Enviar!</button>`
+
 ### [Tel](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel)
 Este tipo de input nos sirve para guardar información relacionada a numeros telefonicos, a simple vista es igual que el input de tipo texto pero tienen algunas diferencias que mejoran la experiencia del usuario cómo por ejemplo en algunos **dispositivos mobiles nos mostrará sólo el teclado númerico** en vez del general.
 ```html
