@@ -1,0 +1,32 @@
+/*
+pseudo clases que sirven para modificar los inputs dependiendo su estado. 
+:invalid
+:valid
+*/
+
+input:valid {
+  background-color: green;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+/* selecciono los inputs a partir del atributo con los corchetes */
+input[name="lastName"] {
+  padding: 10px;
+  color: white;
+}
+
+/*
+pseudo elemento
+::placeholder
+*/
+input[name="lastName"]::placeholder {
+  color: red;
+}
+
+input[name="lastName"]::selection {
+  color: black;
+  background-color: white;
+}

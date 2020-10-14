@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 13</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="" method="GET">
+    <div>
+      <label for="firstName">Nombre: </label>
+      <input type="text" name="firstName" id="firstName" required>
+    </div>
+    <div>
+      <label for="lastName" style="display: none;">Apellido: </label>
+      <input type="text" name="lastName" id="lastName" placeholder="Escriba su apellido" required>
+      <!-- accesibilida d de los placeholders -->
+    </div>
+    <div>
+      <label for="comment">Escriba aqui su comentario</label>
+      <br>
+      <textarea name="comment" id="comment" cols="10" rows="5"></textarea>
+    </div>
+    <div>
+      <label for="team">De que equipo sos ?</label>
+      <br>
+      <select name="team" id="team">
+        <option value="">Seleccione un equipo</option>
+        <optgroup label="De Argentina">
+          <option value="river">River</option>
+          <option value="velez">Velez</option>
+          <option value="lanus">Lanus</option>
+        </optgroup>
+        <optgroup label="De España">
+          <option value="barca">Barca</option>
+          <option value="realMadrid">Real Madrithh</option>
+          <option value="depor">El depor</option>
+        </optgroup>
+      </select>
+    </div>
+    
+    <button type="submit">ENVIAR FORMULARIO</button>
+  </form>
+</body>
+</html>
