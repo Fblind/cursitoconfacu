@@ -1,9 +1,9 @@
 # Clase 1 - JS
 
 TODO:
-* Finalizar primer programa
-* Agregar links de referencia
 * Videos (que es la programacion, javascript: historia, caracteristicas e instalacion)
+
+## Temario
 
 * Introducción a la programación, los programas (o apps) y sus puntos de vista ?
 * Paradigmas de programacion
@@ -68,5 +68,93 @@ En cambio si queremos ejecutar el código en el servidor o nuestra propia comput
 
 ## JavaScript: IDEs y herramientas.
 
+Les dejo unos videos que pueden seguir para instalar y configurar su entorno de desarrollo https://youtu.be/69WJeXGBdxg y https://youtu.be/9nKTxtv6D1w
+
 ## JavaScript: Primer programa.
+
+Vamos a escribir nuestro primer programa, para eso vamos a **crear un archivo nuevo** en nuestro *IDE (Integrated Development Environment o Entorno de desarrollo integrado)* con la extension **.js**.
+
+Lo vamos a llamar **index.js** y dentro de él escribiremos `console.log("Hola" + " " + "Mundo!");`, y por último vamos a crear otro archivo en el mismo directorio con el nombre de **index.html** y dentro de él vamos a agregar lo minimo necesario para poder relacionar nuestro archivo HTML con nuestro archivo JavaScript.
+
+Los archivos quedarían de la siguiente forma:
+
+index.html
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Primer programa javascript</title>
+</head>
+<body>
+  <script src="index.js"></script>
+</body>
+</html>
+```
+
+index.js
+```javascript
+console.log("Hola" + " " + "Mundo!");
+```
+
+> También podemos hacer esto mismo desde la consola de nuestro explorador usando las herramientas para los desarrolladores.
+
+### Y esto qué hace, cómo se come ?
+
+Vamos a analizar y ver todo lo que pasa en la linea de que escribimos en el archivo `index.js`. Primero y lo más importante cómo ejecutamos y qué hace lo que acabamos de escribir ?.
+
+Para ejecutarlo lo único que **tenemos que hacer es abrir nuestro archivo index.html en el navegador**. Pero ahora bien, qué hace lo que acabamos de escribir, lo que va a ocurrir es mostrarnos un mensaje **Hola Mundo!** en la consola del navegador, la cuál accedemos haciendo **click derecho sobre la página que acabamos de abrir y seleccionamos inspeccionar**, una vez hecho esto se nos va a abrir lo que llamamos las **herramientas del desarrollador o devtools** y si vamos a la pestaña que dice **consola** vamos a ver el mensaje `Hola Mundo`.
+
+## JavaScript: conceptos generales de nuestro primer programa
+
+Luego de escribir nuestro primer programa y ejecutarlo vamos a ver en términos generales (a medida que avancemos vamos a entrar más en detalle sobre estos conceptos) todo lo que ocurrió y los conceptos.
+
+Lo primero que podemos ver es la línea completa `console.log("Hola" + " " + "Mundo!");`, esto se lo conoce con el nombre de **sentencia o statement** y es el conjunto de cosas (letras, numeros, variables, valores) y operadores que se esta ejecutando en ese momento y terminan o delimitan conun punto y coma (`;`). Los programas en JavaScript y en la mayoria de los lenguajes **son un conjunto de estas sentencias que se van ejectuando de arriba hacia abajo**.
+
+> Si tu sentencia es de una linea, como en el programa que acabamos de crear podes optar por no agregar el punto y coma, ya que hay mecanismos en los entornos de ejecución que las agregan. Igualmente es recomendable agregarlas.
+
+En el párrafo anterior vimos el concepto de sentencia y dijimos que estaba formada por *"cosas" y operadores*, a esto le llamamos **expresiones o expressions** y una o el conjunto de ellas forman las sentencias. Las **expresiones pueden ser valores**, es decir palabras (entre comillas), números, referencias a variables y cosas literales, **o un conjunto de valores combinados con operadores**.
+
+Ahora vamos a analizar las partes de esta sentencia, primero tenemos la palabra `console`, esta hace referencia a la **consola donde vimos el mensaje** y a su vez es lo que llamamos un **objeto**, es decir una **estructura de datos para representar un conjunto de pares clave-valor** y lo usamos para agrupar funcionalidades y delegar en este objeto la responsabilidad de darnos cierta información. 
+
+Podemos definir un objeto de la siguiente manera: 
+```javascript
+console = {
+  log: function (word) {
+    return word;
+  },
+  name: "console"
+}
+
+// aca tenemos un objeto console que tiene 2 propiedades o claves, "log" y "name", y a su vez cada propiedad tiene un valor que es lo que esta a la derecha de la propiedad después del dos puntos (:)
+```
+
+> Console es un objeto que podemos acceder "magicamente" cuando estamos ejecutando nuestro codigo en el entorno de ejecución, en este caso el explorador web y es éste quien nos lo proveé al igual que otros objetos como `window` o `document`. Lo importante es reconocer que no es parte del lenguaje sino que nos lo provee el runtime, diferente es el caso de la funcion `parseInt` o el objeto `Math`.
+
+Luego nos encontramos con nuestro primer **operador**, el punto (`.`) que en este caso al estar al lado de un objeto representa el **operador de accesso a las propiedades de los objetos o object property access** y nos da la posibilidad de pedir una propiedad especifica de nuestro objecto, en este caso estamos **pidiendo el valor de la propiedad log cuando hacemos console.log**. No solo existe este operador, sino que hay muchos más, por ejemplo operadores de asignación (`=`), matematicos (`+`, `-`, `*`, `/`), de igualdad (`==`. `!=`, `===`, `!===`), de comparación (`>`, `<`, `>=`, `<=`), lógicos (`&&`, `||`), [entre otros](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+
+Ni bien seguimos viendo nos topamos con que la propiedad log tiene pegado a ella unos parentesis con algo en el medio (`"Hola" + " " + "Mundo!"`) y si volvemos para atrás y vemos los que leimos anteriormente encontramos que **si haciamos console.log nos daban el valor de la propiedad log** y como tenemos unos parentesis pegados a la propiedad podemos deducir que el valor de esa propiedad es una **función o function**. Las funciones son un **conjunto de sentencias que representan algo y queremos reutilizar o darle un nombre concreto y descriptivo para entender mejor nuestro código**. Se puede decir que tienen dos momentos una cuando se la **define o declara**, por ejemplo `function(word) { return word }` como la definimos en el objeto de ejemplo, y otro momento cuando se la **usa o ejecuta**, por ejemplo `console.log("Hola" + " " + "Mundo!")`.
+
+Cuando declaramos nuestras funciones **podemos hacer que reciban parametros**, es decir valores, datos o información que nos vamos a aceptar y nos van a servir para las sentencias que tengamos adentro. Entonces cuando ejecutamos la función debemos pasarle estos valores que necesitan y en este caso los llamaremos **argumentos**.
+
+> Acordate que cuando programamos lo hacemos para humanos no para las maquinas !, asi que siempre que escribamos algo hay que tratar de hacerlo lo más descriptivo posible
+
+Por último tenemos toda esta **expresion** `"Hola" + " " + "Mundo!"` que se la pasamos como argumento a la funcion log del objeto console. Y al analizar más en detalle esta expresion podemos ver que hay **palabras o espacios envueltos por comillas** (`"`), a esto los conocemos como **valores string literales o string literal**, que son uno de los **tipos de datos o data types** que tiene JavaScript.
+
+Entre esos strings tenemos los operadores (`+`) que en este caso diremos que es el operador de concatenación y lo que va a hacer es unir todos nuestros strings, dandonos cómo resultado `"Hola Mundo"`.
+
+## Conclusión
+
+En esta clase vimos muchos conceptos nuevos y juntos, lo importante es no desanirmarse y entender que todo esto lo vamos a ir afianzando a medida que avancemos y vayamos practicando y realizando proyectos.
+
+## Links
+
+De todo un poco
+* https://github.com/getify/You-Dont-Know-JS/tree/1st-ed
+* https://eloquentjavascript.net/
+* https://exploringjs.com/
+* https://tc39.es/
+* https://blog.teamtreehouse.com/mastering-developer-tools-console
+* https://github.com/leonardomso/33-js-concepts
+* https://github.com/microsoft/Web-Dev-For-Beginners
+* https://mumuki.io/
 
