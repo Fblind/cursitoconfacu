@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript - comentarios, valores, variables, referencias y tipos de datos</title>
+  <link crossorigin rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/reset.css" />
+  <link crossorigin rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/reveal.css" />
+  <!-- <link crossorigin rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/lib/css/monokai.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/night-owl.min.css" integrity="sha512-xYwrX34LRktCfb+3WW0FtJf6qEc2tcJet152No8epFPBoM4qNaaVk5xdfCYI0Ns0H2jD0Isc3VoShSMv6zzpPA==" crossorigin="anonymous" />
+  <link crossorigin rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/theme/night.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  
+  <script crossorigin src="https://unpkg.com/reveal.js@3.9.2/js/reveal.js"></script>
+  <script crossorigin src="https://unpkg.com/reveal.js@3.9.2/plugin/highlight/highlight.js"></script>
+  <script crossorigin src="https://unpkg.com/reveal.js@3.9.2/plugin/markdown/markdown.js"></script>
+
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- COMMENTS -->
+      <section>Comentarios</section>
+      <section>
+        <section>
+          <ul>
+            <li class="">Código no evaluado ni ejecutado por el runtime.</li>
+            <li class="fragment">Usarlo poco, a conciencia y temporalmente si se necesita.</li>
+            <li class="fragment">Código y tests muestran utilización del sistema.</li>
+            <li class="fragment">De una línea o Multi línea.</li>
+          </ul>
+        </section>
+        <section>
+          <pre>
+            <code data-trim data-noescape data-line-numbers="1-4|6-10">
+// Esto es un comentario de una linea
+// Esto es otro comentario de una linea
+// Esto es otro comentario más de una linea y 
+// asi como los anteriores este tampoco se va a ejecutar.
+  
+/* 
+  Con el `/*` comienza el comentario de multiples lineas
+  donde podes escribir las lineas 
+  que quieras hasta que lo cierres
+*/
+          </code>
+        </pre>
+        </section>
+      </section>
+      <!-- VALORES -->
+      <section>Valores</section>
+      <section>
+        <section>
+          <ul>
+            <li><strong>Representaciones de algo</strong>, Ej: $0 o gratis, 2*1 o 2 al 50%, venis? si o no</li>
+            <li class="fragment">Pueden ser <strong>números, texto, funciones, listas, etc</strong></li>
+            <li class="fragment">Si los incluimos directamente en el codigo los llamamos <strong>"literales"</strong></li>
+            <li class="fragment">En JavaScript los <strong>valores siempre estan asociados a un "tipo de dato"</strong></li>
+          </ul>
+        </section>
+      </section>
+      <!-- TIPOS DE DATOS -->
+      <section>Tipos de datos</section>
+      <section>
+        <section>
+          <h2>Debilmente tipado</h2>
+          <ul>
+            <li class="fragment">Variables no estan asociadas a un tipo de dato</li>
+            <li class="fragment">Pueden "mutar" es pseudo dinamico y toma el valor mediante la asignación</li>
+            <li class="fragment">Representacion de tipos pequeña y abarcativa</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Tipos del lenguaje</h2>
+          <ul>
+            <li class="fragment">Number (NaN)</li>
+            <li class="fragment">BigInt</li>
+            <li class="fragment">String</li>
+            <li class="fragment">Boolean</li>
+            <li class="fragment">Object (Function, Array, Date)</li>
+            <li class="fragment">null</li>
+            <li class="fragment">undefined</li>
+            <li class="fragment">Symbol</li>
+          </ul>
+          <small class="fragment">Sacando object, los demás se llaman <strong>primitivas</strong></small>
+        </section>
+        <section>
+          <h2>typeof operator</h2>
+          <p>Representación en texto del tipo de dato de un valor</p>
+          <pre>
+            <code data-trim data-noescape data-line-numbers="1|2|3|4|5|6|7|8">
+              var a; typeof a;                    // "undefined"
+              a = "hello world"; typeof a;        // "string"
+              a = 42; typeof a;                   // "number"
+              a = true; typeof a;                 // "boolean"
+              a = null; typeof a;                 // "object" -- weird, bug
+              a = undefined; typeof a;            // "undefined"
+              a = { b: "c" }; typeof a;           // "object"
+              a = Symbol(); typeof a;             // "symbol"
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>Coercion</h2>
+          <ul>
+            <li class="fragment">Convertir valores <strong>implicitamente</strong></li>
+            <li class="fragment">Convergen en una <strong>primitiva</strong></li>
+            <li class="fragment">La conversion se hace en tiempo de ejecucion</li>
+          </ul>
+          <p class="fragment">Type casting es explicito y se hace en tiempo de compilacion</p>
+        </section>
+        <section>
+          <pre>
+            <code data-trim data-noescape data-line-numbers="1-2|3|4-5">
+              var a = 42;
+              var b = a + "";       // "42" implicit coercion
+              var c = String( a );  // "42" explicit coercion (casting)
+              var d = "42"
+              var e = +d            // 42 implicit
+            </code>
+          </pre>
+          <p>Importante: Esto nos va a servir para entender algunos operadores en el futuro!</p>
+        </section>
+        <!-- <section>
+          <h2>Truthy and Falsy</h2>
+          <ul class="fragment">
+            <li>false</li>
+            <li>0</li>
+            <li>-0</li>
+            <li>0n</li>
+            <li>""</li>
+            <li>null</li>
+            <li>undefined</li>
+            <li>NaN</li>
+          </ul>
+          <p class="fragment">Todos los demás valores son Truthy</p>
+        </section> -->
+      </section>
+      <!-- VARIABLES -->
+      <section>Variables</section>
+      <section>
+        <section>
+          <ul>
+            <li>Cajas para <strong>guardar valores o referencias</strong></li>
+            <li class="fragment">Nombres <strong>representativos</strong> para usarlo en nuestro código</li>
+            <li class="fragment">Keyword más nombre empezando con <strong> a-z, A-Z, $, o _ y después lo que querramos más 0-9</strong></li>
+            <li class="fragment">camelCase</li>
+            <li class="fragment">Declaración, inicialización (asignacion), uso, * re-asignación</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Declaración</h2>
+          <ul>
+            <li>var</li>
+            <li>let</li>
+            <li>const</li>
+            <li>* sin keyword</li>
+          </ul>
+        </section>
+        <section>
+          <h2>var</h2>
+          <ul>
+            <li>Function scoped</li>
+            <li>Se puede re-asignar</li>
+            <li>Disponible "antes de asignarla" (hoisting)</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Hoisting</h2>
+          <p>Llevar para <strong>arriba la declaración dentro del scope</strong> (las functions declarations tmb!)</p>
+        </section>
+        <section>
+          <h2>let</h2>
+          <ul>
+            <li>Block scoped</li>
+            <li>Se puede re-asignar</li>
+            <li>Disponible despues de declararlo (TDZ)</li>
+          </ul>
+        </section>
+        <section>
+          <h2>const</h2>
+          <ul>
+            <li>Block scoped</li>
+            <li>NO se puede re-asignar</li>
+            <li>Disponible despues de declararlo (TDZ)</li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </div>
+  
+  <script>
+    Reveal.initialize({
+      plugins: [ RevealMarkdown, RevealHighlight ]
+    });
+  </script>
+</body>
+</html>
