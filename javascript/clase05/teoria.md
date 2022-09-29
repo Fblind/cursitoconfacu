@@ -7,7 +7,7 @@ Vamos a realizar en conjunto un programa, en este caso una aplicación web, que 
 
 En primera instancia vamos a crear todo en el cliente, usando las herramientas que nos ofrece el browser y en un futuro vamos a llevar parte de nuestra lógica al srvidor.
 
-![mvp][https://github.com/Fblind/cursitoconfacu/blob/master/javascript/clase05/mvp.png]
+![mvp](https://github.com/Fblind/cursitoconfacu/blob/master/javascript/clase05/mvp.png)
 
 ## Creación de gastos
 Lo primero que vamos a hacer es crear un gasto siguendo el diseño que hicimos en la imagen anterior. Para hacerlo, tenemos que aplicar lo que fuimos viendo a lo largo del curso, más precisamente la parte de [formularios](https://github.com/Fblind/cursitoconfacu/blob/master/clase11/teoria.md#forms) y las [clases siguientes](https://github.com/Fblind/cursitoconfacu/blob/master/clase12/teoria.md) donde vimos [distintos formas](https://github.com/Fblind/cursitoconfacu/blob/master/clase13/teoria.md) de interactuar con el usuario.
