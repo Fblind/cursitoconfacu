@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">  
+  <title>Agregar gasto</title>
+</head>
+<body>
+  <h1>Agregar gasto</h1>
+  <form action="/agregar" novalidate>
+    <label label for="dia">Dia</label>
+    <input
+      type="date"
+      name="diaAAgregar"
+      id="dia"
+      required
+    >
+    <br>
+    <label for="monto">Monto</label>
+    <input
+      type="number"
+      name="montoAAgregar"
+      id="monto"
+      min="1"
+      class="monto"
+      required
+    >
+    <br>
+    <label for="descripcion">Descripcion</label>
+    <textarea
+      name="descripcionAAgregar"
+      id="descripcion"
+      cols="15"
+      rows="5"
+      required
+    ></textarea>
+    <br>
+    <button>Agregar</button>
+
+    <!-- <ul>
+      <a>hhola 1</a>
+      <a>hhola 2</a>
+      <a>hhola 3</a>
+      <a>hhola 4</a>
+      <a>hhola 5</a>
+    </ul> -->
+  </form>
+
+  <script src="gasto.js"></script>
+</body>
+</html>
