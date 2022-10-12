@@ -1,6 +1,6 @@
 // let
 
-let joaqui; // declacion
+let joaqui; // declaracion
 joaqui = "joaqui"; // asignacion
 let vale = "vale"; // declaracion y asignacion en la misma linea
 vale = "vale2"; // reasignacion
