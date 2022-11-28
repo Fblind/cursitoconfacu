@@ -1,0 +1,15 @@
+input:valid {
+  border: 1px solid green;
+}
+
+input[type="number"]:invalid {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
