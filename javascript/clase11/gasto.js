@@ -1,3 +1,5 @@
+const listaDeGastos = [];
+
 function dameElMonto() {
   return window.document.querySelector("#monto");
 }
@@ -145,6 +147,10 @@ function dameLosErrores(elemento) {
   return elemento.querySelectorAll(".error");
 }
 
+function dameLosExitos(elemento) {
+  return elemento.querySelectorAll(".exito");
+}
+
 function eliminameLosElementos(elementos) {
   for (let index = 0; index < elementos.length; index++) {
     const elemento = elementos[index];
@@ -154,9 +160,19 @@ function eliminameLosElementos(elementos) {
 
 function limpiarFormulario(formulario) {
   const elementosError = dameLosErrores(formulario);
+  const elementosExito = dameLosExitos(formulario);
   if (elementosError.length > 0) {
     eliminameLosElementos(elementosError);
   }
+  if (elementosExito.length > 0) {
+    eliminameLosElementos(elementosExito);
+  }
+}
+
+function reiniciarFormulario(formulario) {
+  formulario.elements.montoAAgregar.value = "";
+  formulario.elements.descripcionAAgregar.value = "";
+  formulario.elements.diaAAgregar.value = "";
 }
 
 function hayErrores(formulario) {
@@ -176,7 +192,9 @@ function crearGasto(formulario) {
 
 // recibe una lista y un gasto (el que acabamos de crear)
 function agregarGasto(lista, gasto) {
-  // TODO: terminar lista.
+  lista.push(gasto);
+  // lista.push(123)
+  // lista.push("pepito");
 }
 
 // funcion principal
@@ -223,8 +241,9 @@ function validarFormulario(evento) {
     // a lo que quiero llegar, una lista de gastos :
     // [{monto: 12, fecha: "2022-01-01", descripcion: "holis"}]
     const gasto = crearGasto(formulario);
-    console.log(gasto)
-    // agregarGasto(listaDeGastos);
+    agregarGasto(listaDeGastos, gasto);
+    reiniciarFormulario(formulario);
+    setTimeout(() => limpiarFormulario(formulario), 3 * 1000);
   }
 }
 
